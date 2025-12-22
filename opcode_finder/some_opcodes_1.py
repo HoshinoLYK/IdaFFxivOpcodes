@@ -640,7 +640,7 @@ def _():
 @opcode(0x1000F)
 def _():
     return sorted(find_zone_down_switch_values(pattern_scanner.find_address(
-        "48 ? ? ? ? ? ? e8 ? ? ? ? 80 be ? ? ? ? ? 0f 8c"
+        "e8 ? ? ? ? 80 be ? ? ? ? ? 0f 8c ? ? ? ? 80 be"
     )))
 
 
@@ -883,6 +883,12 @@ def _():
 def _():
     return sorted(find_zone_down_switch_values(get_func(pattern_scanner.find_address(
         "40 ? 53 41 ? 41 ? 41 ? 48 ? ? ? ? ? ? ? b8"
+    )).start_ea))
+
+@opcode(0x10077)
+def _():
+    return sorted(find_zone_down_switch_values(get_func(pattern_scanner.find_address(
+        "48 89 45 ? 4c ? ? ? ? ? ? 48 ? ? ? 48 ? ? 48 ? ? ? e8"
     )).start_ea))
 
 

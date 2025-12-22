@@ -88,6 +88,8 @@ names = {
     "MapEffect8": 0x10075,
     "MapEffect12": 0x10076,
 
+    "StatusEffectListForay3": 0x10077,
+
     # up
     "ChatHandler": 0X2001E,
     "ClientTrigger": 0X20002,
