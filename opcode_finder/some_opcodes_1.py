@@ -691,7 +691,7 @@ def _():
 def _():
     pno = {
         0x10028: sorted(find_zone_down_switch_values(pattern_scanner.find_address(
-            "41 ? ? e8 * * * * b0 ? 48 ? ? ? ? 48 ? ? ? ? 48 ? ? ?"
+            "41 ? ? ? 41 ? ? e8 * * * * b0 ? 48 ? ? ? ? 48"
         )))
     }
     pno[0x1005E] = sorted(find_zone_down_switch_values(pattern_scanner.find_address(
